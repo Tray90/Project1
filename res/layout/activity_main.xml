@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/sunny"
+    tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/temperature"
+        android:layout_below="@+id/temperature"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wind"
+        android:layout_below="@+id/wind"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/todayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weather"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="20dp"
+        android:text="Today" />
+
+    <TextView
+        android:id="@+id/tomorrowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/todayText"
+        android:layout_alignRight="@+id/editText1"
+        android:text="Tomorrow" />
+
+    <TextView
+        android:id="@+id/todayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/todayText"
+        android:layout_below="@+id/todayText"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/todayWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/todayTemp"
+        android:layout_below="@+id/todayTemp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/todayWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/todayWind"
+        android:layout_below="@+id/todayWind"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tomorrowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/todayTemp"
+        android:layout_alignLeft="@+id/tomorrowText"/>
+
+    <TextView
+        android:id="@+id/tomorrowWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/todayWind"
+        android:layout_alignLeft="@+id/tomorrowTemp"/>
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Refresh" />
+
+</RelativeLayout>
